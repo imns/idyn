@@ -1,7 +1,7 @@
 import * as esbuild from "esbuild";
 
 const buildOptions = {
-    entryPoints: ["src/index.ts"],
+    entryPoints: ["src/index.ts", "runtime-tests/"],
     bundle: true,
     platform: "node",
     target: "node20",
@@ -9,6 +9,9 @@ const buildOptions = {
     format: "esm",
     sourcemap: true,
     minify: process.env.NODE_ENV === "production",
+    alias: {
+        "@": "./src",
+    },
 };
 
 try {
