@@ -7,6 +7,7 @@ export enum Runtime {
     Unknown = "unknown",
 }
 
+//
 export interface CryptoFactory {
     generateRandomString(length: number): string;
     hashPassword(password: string, salt: string): Promise<string>;
