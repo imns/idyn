@@ -1,7 +1,7 @@
 import * as esbuild from "esbuild";
 
 const buildOptions = {
-    entryPoints: ["src/index.ts", "runtime-tests/"],
+    entryPoints: ["src/index.ts"],
     bundle: true,
     platform: "node",
     target: "node20",
